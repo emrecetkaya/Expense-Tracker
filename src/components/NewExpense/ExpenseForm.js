@@ -6,54 +6,17 @@ const ExpenseForm = (params) => {
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
-  // const [userInput, setUserInput] = useState({
-  //   title: '',
-  //   amount: '',
-  //   date: ''
-  // });
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
-    // // setUserInput({
-    // //   ...userInput,
-    // //   enteredTitle: event.taget.value
-    // // })
-    // setUserInput((prevState) => {
-    //   return {
-    //     ...prevState,
-    //     title: event.target.value
-    //   }
-    // })
-
-
   }
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredAmount: event.taget.value
-    // })
-    // setUserInput((prevState) => {
-    //   return {
-    //     ...prevState,
-    //     amount: event.target.value
-    //   }
-    // })
   }
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredDate: event.taget.value
-    // })
-    // setUserInput((prevState) => {
-    //   return {
-    //     ...prevState,
-    //     date: new Date(event.target.value)
-    //   }
-    // })
   }
 
   const submitHandler = (event) => {
@@ -90,6 +53,7 @@ const ExpenseForm = (params) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick={params.handleFormStat}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
